@@ -1,4 +1,4 @@
-$folderPath = "C:\Users\Ariel Nathanson\Desktop\OmriVault" ;
+$folderPath = $args[0];
 Set-Location -Path $folderPath;
 
 git add . ;
