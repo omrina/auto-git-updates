@@ -1,5 +1,5 @@
-$obsidian_path = Read-Host "enter the obsidian exe full path:"
-$vault_path = Read-Host "enter full vault path:"
+$obsidian_path = Read-Host "enter the obsidian exe full path"
+$vault_path = Read-Host "enter full vault path"
 
 # the trigger is a log of process 
 $EventTriggerXmlForPull = @"
