@@ -1,4 +1,5 @@
 $folderPath = $args[0];
+$app_name = $args[1]
 Set-Location -Path $folderPath;
 
 git add . ;
@@ -8,4 +9,4 @@ git commit -m $commitMessage ;
 
 git push ;
 
-Write-Output "OmriVault backup completed and pushed to Git repository." ;
+Write-Output "$app_name backup completed and pushed to Git repository." ;
