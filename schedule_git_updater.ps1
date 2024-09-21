@@ -1,3 +1,19 @@
+if (-not ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)) {
+  Write-Host "you must run this as administrator! exiting..."
+  exit
+}
+
+Write-Output "Welcome to auto git updates!"
+Write-Output "first we need to do some set up:"
+Write-Output ""
+Write-Output "enabling process creation logs..."
+auditpol /set /subcategory:"Process Creation" /success:enable /failure:enable
+Write-Output ""
+Write-Output "enabling process termination logs..."
+auditpol /set /subcategory:"Process Termination" /success:enable /failure:enable
+
+Write-Output ""
+Write-Output "next step, give us some info:"
 $app_path = Read-Host "enter the app exe full path"
 $git_path = Read-Host "enter git repo full path"
 $app_name = Read-Host "enter app name for task readability"
@@ -89,3 +105,4 @@ Register-ScheduledTask -TaskName "$app_name push task" -Xml $pushTaskXml
 Write-Output "Scheduled task of PUSH created successfully."
 Register-ScheduledTask -TaskName "$app_name pull task" -Xml $pullTaskXml
 Write-Output "Scheduled task of PULL created successfully."
+Write-Output "All done! enjoy :-)"
