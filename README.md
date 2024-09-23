@@ -1,5 +1,5 @@
 # auto-git-updates
-Make your git repo automatically up to date with powershell:
+Make your git repo automatically up to date with powershell!
 ## This tool creates 2 scheduled tasks:
 *First choose an app (for example *notepad*)
 1. When the app you chose is **launched** OR you **log in** to computer -> perform `git pull`
