@@ -5,7 +5,7 @@ Make your git repo automatically up to date with powershell!
 1. When the app you chose is **launched** OR you **log in** to computer -> perform `git pull`
 2. When the app you chose is **closed** OR **every 30 minutes** -> perform `git add & commit & push`
 
-The app launch and close and the computer logon are triggers the task by event log of process creation, process termination and account logon.  
+The app launch & close and the computer logon are the task triggers, determined by windows event log of process creation, process termination and account logon.  
 
 > **_NOTE:_**  It's assumed your default branch is **main**.  
 > If you wish to change it, edit `git_pull.ps1` line 5 and change the branch.  
