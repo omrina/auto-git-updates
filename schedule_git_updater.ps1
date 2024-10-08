@@ -63,6 +63,7 @@ function SchedulePushOnAppCloseAndEvery30Min {
     <StopIfGoingOnBatteries>false</StopIfGoingOnBatteries>
     <StartWhenAvailable>true</StartWhenAvailable>
     <AllowHardTerminate>true</AllowHardTerminate>
+    <ExecutionTimeLimit>PT1H</ExecutionTimeLimit>
   </Settings>
   <Actions Context="Author">
     <Exec>
@@ -127,6 +128,7 @@ function SchedulePullOnAppOpenAndOnLogon {
     <StopIfGoingOnBatteries>false</StopIfGoingOnBatteries>
     <StartWhenAvailable>true</StartWhenAvailable>
     <AllowHardTerminate>true</AllowHardTerminate>
+    <ExecutionTimeLimit>PT1H</ExecutionTimeLimit>
   </Settings>
   <Actions Context="Author">
     <Exec>
