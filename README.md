@@ -12,7 +12,7 @@ The app launch & close and the computer logon are the tasks triggers, determined
   
 ## Installation  
 * Open CMD as **admin**.  
-* Run `powershell schedule_git_updater.ps1`.  
+* Run `powershell ./schedule_git_updater.ps1`.  
 * Follow 2 simple input prompts (app path & repo path)  
 
 # Enjoy! :)
